@@ -1,0 +1,392 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_username="tao_puchong96@hotmail.com" this:Main.in_password="Taoset99" this:Main.in_side="BUY" this:Main.in_vol="100" this:Main.in_symbol="AOT" this:Main.in_price="73" this:Main.token="51" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_username" Type="InArgument(x:String)" />
+    <x:Property Name="in_password" Type="InArgument(x:String)" />
+    <x:Property Name="in_side" Type="InArgument(x:String)" />
+    <x:Property Name="in_vol" Type="InArgument(x:String)" />
+    <x:Property Name="in_symbol" Type="InArgument(x:String)" />
+    <x:Property Name="in_price" Type="InArgument(x:String)" />
+    <x:Property Name="token" Type="InArgument(x:String)" />
+    <x:Property Name="id" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1874,8941</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="774,8876" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="712,8765" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Use Browser: CLICK2WIN" sap:VirtualizedContainerService.HintSize="678,8118" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="13357c03-bf09-4178-a1ea-80c2c2ade253" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,7842" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="602,90" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="602,1507" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="13357c03-bf09-4178-a1ea-80c2c2ade253" Version="V3">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,1183" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="13357c03-bf09-4178-a1ea-80c2c2ade253" Text="[in_username]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/SETClick2WIN/index.jsp?txtBrokerId=089&amp;txtFailMsg=You+have+logged+out+successfully.+&amp;txtClose=1&amp;txtLanguage=ENGLISH" DesignTimeRectangle="741, 219, 212, 27" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='header' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='input_login_username' aaname='' /&gt;" Guid="0b4d7859-fa76-4054-9203-086180ca83dd" InformativeScreenshot="1f3edfbda56e429a75aca6564a2f7365.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CLICK2WIN' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_13" />
+                      <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="13357c03-bf09-4178-a1ea-80c2c2ade253" Text="[in_password]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/SETClick2WIN/index.jsp?txtBrokerId=089&amp;txtFailMsg=You+have+logged+out+successfully.+&amp;txtClose=1&amp;txtLanguage=ENGLISH" DesignTimeRectangle="960, 219, 212, 27" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl parentid='header' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header' tag='TABLE' /&gt;&lt;webctrl class='input_login_password' tag='INPUT' type='password' aaname='' /&gt;" Guid="cdbdf45e-ee64-4061-9c87-e5a65da78d30" InformativeScreenshot="3f047b9944ba531e7aa738cfb175eba1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CLICK2WIN' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_12" />
+                      <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="13357c03-bf09-4178-a1ea-80c2c2ade253" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/SETClick2WIN/index.jsp?txtBrokerId=089&amp;txtFailMsg=You+have+logged+out+successfully.+&amp;txtClose=1&amp;txtLanguage=ENGLISH" DesignTimeRectangle="1178, 218, 91, 28" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='header' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header' tag='TABLE' /&gt;&lt;webctrl class='input_login_submit-login' tag='INPUT' type='submit' aaname='' /&gt;" Guid="602863e0-23fe-418a-97ec-00fa43350933" InformativeScreenshot="6b41478e1aa79e0a42b01da305875a94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CLICK2WIN' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,103" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/SETClick2WIN/index.jsp?txtBrokerId=089&amp;txtFailMsg=You+have+logged+out+successfully.+&amp;txtClose=1&amp;txtLanguage=ENGLISH" DesignTimeRectangle="953, 204, 73, 22" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='header' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header' tag='TABLE' /&gt;&lt;webctrl class='input_login_submit-login' tag='INPUT' type='submit' aaname='' /&gt;" Guid="90264cad-acd6-4e33-9c56-33d2b57a48ae" InformativeScreenshot="18067294d1be79c62a25acc58e2eff7d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CLICK2WIN' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="602,90" sap2010:WorkflowViewState.IdRef="Delay_24" />
+                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: Settrade Streaming for PC - https://click2win.settrade.com" sap:VirtualizedContainerService.HintSize="602,5564" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568,5288" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="526,90" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                        <If Condition="[in_side = &quot;BUY&quot;]" sap:VirtualizedContainerService.HintSize="526,5070" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="492,2444" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="16, 650, 16, 15" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl id='equity-place-order-buy-radio-button' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='equity-place-order-buy-radio-button' tag='INPUT' type='radio' class='css-lh9tfg display-inline-block css-1p7oz1r position-absolute left-0 z-index-radio-button m-0 p-0 opacity-0 cursor-pointer css-7ge1fn' aaname='Buy' /&gt;" Guid="4bd11164-1699-4126-a061-95633d67cd1e" InformativeScreenshot="ef1b37723965d08c248eb6be08666b00.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="32, 647, 24, 18" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Buy' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buy' tag='LABEL' type='' class='position-absolute font-size-13 left-2 cursor-pointer text-color-primary' check:innerText='Buy' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_14" />
+                              <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Text="[in_symbol]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="138, 647, 116, 19" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='INPUT' class='position-absolute bg-color-transparent height-full py-0 outline-none border-width-0 width-inherit font-weight-600 border-color-input text-color-primary text-color-input--placeholder font-weight-600--placeholder css-1kdosrk css-wivpzm css-q4nrlb' aaname='' /&gt;" Guid="44443b38-aeec-421c-a479-6ee885a02a72" InformativeScreenshot="cc17f1aea90bd48e5b5b872de7073f3c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_15" />
+                              <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Text="[in_vol]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="354, 646, 88, 21" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='equity-place-order-vol' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='equity-place-order-vol' tag='INPUT' type='' class='css-10ilngu display-inline-block height-inherit font-size-13 outline-none box-sizing-border-box px-0-half bg-color-input border-width-1 border-style-solid border-color-input text-color-primary focus--border-width-1 focus--border-style-solid focus-within--border-color-input focus--border-style-solid disabled--text-color-input disabled--bg-color-input disabled--cursor-default text-color-input--placeholder disabled--text-color-input--placeholder font-weight-600--placeholder font-size-13--placeholder text-align-left disabled--border-color-input css-knh2c0' aaname='' /&gt;" Guid="1f02ea99-4907-40d3-a4f4-78e1389635fc" InformativeScreenshot="4c01782feb688b148f60864975fb8c97.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="325, 648, 21, 16" ElementType="Text" FriendlyName="'Vol'" FullSelectorArgument="&lt;webctrl aaname='Vol:' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Vol:' tag='SPAN' type='' class='font-size-12 my-auto mr-1' check:innerText='Vol:' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_16" />
+                              <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Text="[in_price]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="502, 646, 88, 21" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='price-input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='price-input' tag='INPUT' type='' class='css-10ilngu display-inline-block height-inherit bg-color-input text-color-primary font-size-13 outline-none box-sizing-border-box border-width-1 border-color-input border-style-solid px-0-half focus-within--border-color-input disabled--text-color-input disabled--bg-color-input disabled--cursor-default text-color-input--placeholder disabled--text-color-input--placeholder font-weight-600--placeholder font-size-13--placeholder text-align-left css-knh2c0 disabled--border-color-input' aaname='' /&gt;" Guid="419e687c-e094-4406-b3f9-1d3594ae4022" InformativeScreenshot="acfcc9505ff9faffe7c0119fd46a9c30.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="463, 648, 32, 16" ElementType="Text" FriendlyName="'Price'" FullSelectorArgument="&lt;webctrl aaname='Price:' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Price:' tag='SPAN' type='' class='font-size-12 my-auto mr-1' check:innerText='Price:' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_17" />
+                              <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="1115, 646, 104, 21" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Buy' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buy' tag='BUTTON' type='' class='bg-color-buy-button font-size-14 line-height-1rem text-color-primary outline-none cursor-pointer disabled--cursor-default disabled--opacity-40-percent border-width-1 border-style-solid focus--border-color-submit-button py-0-half font-weight-600 border-color-transparent disabled--bg-color-submit-button disabled--text-color-submit-button display-flex justify-content-center align-items-center css-1q863r0 display-inline-block css-11ihha' check:innerText='Buy' /&gt;" Guid="c3b50879-8766-4f3a-94c3-49189682e935" InformativeScreenshot="97488b8fb652dab5980d5bf5d6a40ff4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_18" />
+                              <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="648, 546, 184, 38" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Buy' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Buy' type='' tag='BUTTON' class='text-color-primary font-size-16 cursor-pointer width-full border-width-0 border-width-0 disabled--cursor-default disabled--text-color-modal-button disabled--bg-color-modal-button bg-color-buy-button' check:innerText='Buy' /&gt;" Guid="d2dbe97a-dcf8-4cdb-99c3-708b84440cb6" InformativeScreenshot="ba25fdf06a6d5ddf87b12c10a9102aef.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="492,2444" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="72, 650, 16, 15" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl id='equity-place-order-sell-radio-button' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='equity-place-order-sell-radio-button' tag='INPUT' type='radio' class='css-lh9tfg display-inline-block css-1p7oz1r position-absolute left-0 z-index-radio-button m-0 p-0 opacity-0 cursor-pointer css-7ge1fn' aaname='Sell' /&gt;" Guid="b1d5e35e-e066-499c-858f-4577fcf3f7f5" InformativeScreenshot="7b69d2bf6fdd30f230994e6b67c9f337.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="87, 647, 22, 18" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Sell' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sell' tag='LABEL' type='' class='position-absolute font-size-13 left-2 cursor-pointer text-color-primary' check:innerText='Sell' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_19" />
+                              <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Text="[in_symbol]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="138, 647, 116, 19" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='INPUT' class='position-absolute bg-color-transparent height-full py-0 outline-none border-width-0 width-inherit font-weight-600 border-color-input text-color-primary text-color-input--placeholder font-weight-600--placeholder css-1kdosrk css-wivpzm css-q4nrlb' aaname='' /&gt;" Guid="04f7ee38-ebf1-4330-8e14-07854f2a2710" InformativeScreenshot="702bf18a54233c797a72450214433bf3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_20" />
+                              <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_27" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Text="[in_vol]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="354, 646, 88, 21" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='equity-place-order-vol' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='equity-place-order-vol' tag='INPUT' type='' class='css-10ilngu display-inline-block height-inherit font-size-13 outline-none box-sizing-border-box px-0-half bg-color-input border-width-1 border-style-solid border-color-input text-color-primary focus--border-width-1 focus--border-style-solid focus-within--border-color-input focus--border-style-solid disabled--text-color-input disabled--bg-color-input disabled--cursor-default text-color-input--placeholder disabled--text-color-input--placeholder font-weight-600--placeholder font-size-13--placeholder text-align-left disabled--border-color-input css-knh2c0' aaname='' /&gt;" Guid="39416dd5-eb7e-4916-9172-91e03de38f38" InformativeScreenshot="3b3576d35430fb37955fd3dbeab601ac.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="325, 648, 21, 16" ElementType="Text" FriendlyName="'Vol'" FullSelectorArgument="&lt;webctrl aaname='Vol:' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Vol:' tag='SPAN' type='' class='font-size-12 my-auto mr-1' check:innerText='Vol:' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_21" />
+                              <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Text="[in_price]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="502, 646, 88, 21" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='price-input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='price-input' tag='INPUT' type='' class='css-10ilngu display-inline-block height-inherit bg-color-input text-color-primary font-size-13 outline-none box-sizing-border-box border-width-1 border-color-input border-style-solid px-0-half focus-within--border-color-input disabled--text-color-input disabled--bg-color-input disabled--cursor-default text-color-input--placeholder disabled--text-color-input--placeholder font-weight-600--placeholder font-size-13--placeholder text-align-left css-knh2c0 disabled--border-color-input' aaname='' /&gt;" Guid="3610c529-8ff6-469f-b8ec-db265a1f7374" InformativeScreenshot="3472032d5ce9ab40615d9e8354aeecfd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="463, 648, 32, 16" ElementType="Text" FriendlyName="'Price'" FullSelectorArgument="&lt;webctrl aaname='Price:' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Price:' tag='SPAN' type='' class='font-size-12 my-auto mr-1' check:innerText='Price:' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_22" />
+                              <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="1115, 646, 104, 21" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Sell' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sell' tag='BUTTON' type='' class='bg-color-sell-button font-size-14 line-height-1rem text-color-primary outline-none cursor-pointer disabled--cursor-default disabled--opacity-40-percent border-width-1 border-style-solid focus--border-color-submit-button py-0-half font-weight-600 border-color-transparent disabled--bg-color-submit-button disabled--text-color-submit-button display-flex justify-content-center align-items-center css-1q863r0 display-inline-block css-11ihha' check:innerText='Sell' /&gt;" Guid="f751fa9a-db98-4be0-9481-93d644131810" InformativeScreenshot="23a58ed68c9a5f63d8bcda432d0da997.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Delay_23" />
+                              <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39e7ef6a-8786-4c5d-beb2-7bcfee46ae0f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" DesignTimeRectangle="648, 546, 184, 38" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Sell' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sell' type='' tag='BUTTON' class='text-color-primary font-size-16 cursor-pointer width-full border-width-0 border-width-0 disabled--cursor-default disabled--text-color-modal-button disabled--bg-color-modal-button bg-color-sell-button' check:innerText='Sell' /&gt;" Guid="6b778d7f-f0fe-4af8-ae07-bce75c28f5c4" InformativeScreenshot="37164bdeb56d2cf0bcac98ffaa64eb38.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="ec0f156ae1ed2fa98225d4bc352ae01d.jpg" Selector="&lt;html htmlwindowname='streaming_page' title='Settrade Streaming for PC - https://click2win.settrade.com' app='chrome.exe' /&gt;" Title="Settrade Streaming for PC - https://click2win.settrade.com" Url="https://click2win.settrade.com/realtime/streaming7/StreamingPage.jsp" />
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+                <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://seniorproj-back-flask.herokuapp.com/order_time?id=&quot;+id]" sap:VirtualizedContainerService.HintSize="602,343" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" TimeoutMS="6000">
+                  <ui:HttpClient.Attachments>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Attachments>
+                  <ui:HttpClient.Cookies>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Cookies>
+                  <ui:HttpClient.Headers>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Headers>
+                  <ui:HttpClient.Parameters>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Parameters>
+                  <ui:HttpClient.UrlSegments>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.UrlSegments>
+                </ui:HttpClient>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.InUiElement>
+            <InArgument x:TypeArguments="ui:UiElement" />
+          </uix:NApplicationCard.InUiElement>
+          <uix:NApplicationCard.OutUiElement>
+            <OutArgument x:TypeArguments="ui:UiElement" />
+          </uix:NApplicationCard.OutUiElement>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="ec4dc8999138188364a9edaa93d20ce8.jpg" Selector="&lt;html title='CLICK2WIN' app='chrome.exe' /&gt;" Title="CLICK2WIN" Url="https://click2win.settrade.com/SETClick2WIN/index.jsp" />
+          </uix:NApplicationCard.TargetApp>
+          <uix:NApplicationCard.Timeout>
+            <InArgument x:TypeArguments="x:Double" />
+          </uix:NApplicationCard.Timeout>
+          <uix:NApplicationCard.UserDataFolderPath>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:NApplicationCard.UserDataFolderPath>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="OAuth2" Body="[string.Format(&quot;{{{0}      &quot;&quot;startInfo&quot;&quot;: {{{1}      &quot;&quot;ReleaseKey&quot;&quot;: &quot;&quot;fb31ca2f-9ffd-44be-b8a6-7d8498ada728&quot;&quot;,{2}      &quot;&quot;JobsCount&quot;&quot;: 1,{3}      &quot;&quot;Strategy&quot;&quot;: &quot;&quot;ModernJobsCount&quot;&quot;,{4}      &quot;&quot;InputArguments&quot;&quot;: &quot;&quot;{{\&quot;&quot;in_side\&quot;&quot;:\&quot;&quot;&quot;&quot;+side+&quot;&quot;\&quot;&quot;,\&quot;&quot;in_vol\&quot;&quot;:&quot;&quot;+str(vol)+&quot;&quot;,\&quot;&quot;in_symbol\&quot;&quot;:\&quot;&quot;&quot;&quot;+symbol+&quot;&quot;\&quot;&quot;,\&quot;&quot;in_price\&quot;&quot;:\&quot;&quot;&quot;&quot;+str(price)+&quot;&quot;\&quot;&quot;,\&quot;&quot;token\&quot;&quot;:\&quot;&quot;&quot;&quot;+token+&quot;&quot;\&quot;&quot;}}&quot;&quot;{5}      }}{6} }}&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://cloud.uipath.com/tradibmbgugp/DefaultTenant/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs" sap:VirtualizedContainerService.HintSize="450,394" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" OAuth2Token="[token]" TimeoutMS="6000">
+              <ui:HttpClient.Attachments>
+                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+              </ui:HttpClient.Attachments>
+              <ui:HttpClient.Cookies>
+                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+              </ui:HttpClient.Cookies>
+              <ui:HttpClient.Headers>
+                <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-OrganizationUnitId">157894</InArgument>
+              </ui:HttpClient.Headers>
+              <ui:HttpClient.Parameters>
+                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+              </ui:HttpClient.Parameters>
+              <ui:HttpClient.UrlSegments>
+                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+              </ui:HttpClient.UrlSegments>
+            </ui:HttpClient>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_15" />
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
